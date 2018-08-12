@@ -6,79 +6,95 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header class="page-header">
-            <a class="page-header__logo" href="#"><img class="page-header__logo-image" src="svg/nerds-logo.svg"></a>
-            <nav class="main-nav">
-                <ul class="main-nav__list site-list">
-                    <li class="site-list__item"><a class="site-list__studio" href="#">Студия</a></li>
-                    <li class="site-list__item"><a class="site-list__customers" href="#">Клиенты</a></li>
-                    <li class="site-list__item"><a class="site-list__shop" href="#">Магазин</a></li>
-                    <li class="site-list__item"><a class="site-list__contacts" href="#">Контакты</a></li>
-                </ul>
-                <ul class="main-nav__list user-list">
-                    <li><img src="svg/cart-icon.svg"></li>
-                    <li class="user-list__item">Корзина</li>
-                </ul>
-            </nav>
+<header class="page-header">
+    <nav class="main-nav">
+        <a class="main-nav__logo" href="#"><img class="main-nav__logo-image" src="svg/nerds-logo.svg"></a>
+        <ul class="main-nav__list site-list">
+            <li class="site-list__item"><a class="site-list__studio" href="#">Студия</a></li>
+            <li class="site-list__item"><a class="site-list__customers" href="#">Клиенты</a></li>
+            <li class="site-list__item"><a class="site-list__shop" href="#">Магазин</a></li>
+            <li class="site-list__item"><a class="site-list__contacts" href="#">Контакты</a></li>
+        </ul>
+        <ul class="main-nav__list user-list">
+            <li><img src="svg/cart-icon.svg"></li>
+            <li class="user-list__item">Корзина</li>
+        </ul>
+    </nav>
 
-            <div class="slider"></div>
+    <div class="slider"></div>
 
-        </header>
+</header>
 
+<main class="main-body">
+    <section class="advantages">
+        <div class="advantages__web-sites">
+            <img src="svg/">
+            <h2>Веб-сайты</h2>
+            <p>Мир никогда не будет преждним после того как увидит наш сайт!</p>
+            <a href="#" class="order">Заказать</a>
+        </div>
+        <div class="advantages__apps">
+            <img src="svg/">
+            <h2>Приложения</h2>
+            <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+            <a href="#" class="order">Заказать</a>
+        </div>
+        <div class="advantages__presentations">
+            <img src="svg/">
+            <h2>Презентации</h2>
+            <p>Вы даже не подозреваете, насколько вы изумительны!</p>
+            <a href="#" class="order">Заказать</a>
+        </div>
+    </section>
+    <section class="studio-about">
+        <b>Мы &#0151; маленькая, но гордая дизайн-студия из Краснодара.</b>
+        <p>Исповедуем принципы минимализма и чистоты. Ставим на математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+        <h2>Выполняем заказы на разработку:</h2>
+        <ul class="about__list list-orders">
+            <li class="list-orders__item">Веб-сайтов любой сложности</li>
+            <li class="list-orders__item">Мобильных приложений для OC и Android</li>
+            <li class="list-orders__item">Слайшоу и видео для корпоративных презентаций</li>
+        </ul>
+    </section>
+    <section class="studio-stats">
+        <img class="stats__img" src="svg/nerds-logo-2.jpg">
+        <h2>С 2004 года точность во всём:</h2>
+        <table class="studio-stats__table">
+            <tbody>
+            <tr class="percentages">
+                <td>146<b>%</b></td>
+                <td>100<b>%</b></td>
+                <td>50<b>%</b></td>
+            </tr>
+            <tr class="percentages-description">
+                <td>Уровень самоотдачи</td>
+                <td>Соблюдение сроков</td>
+                <td>Минимальная предоплата</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
 
-        <!--
-        <main class="main-body">
-            <section class="advantages">
-                <div class="container">
-                    <div class="advantages__web-sites web-sites">
+    <section class="projects">
 
-                    </div>
-                    <div class="advantages__apps apps">
+    </section>
 
-                    </div>
-                    <div class="advantages__presentations presentations">
+    <section class="map">
 
-                    </div>
-                </div>
-            </section>
-            <section class="studio">
-                <div class="studio__about">
-                    <h2>Мы &#0151; маленькая, но гордая дизайн-студия из Краснодара.</h2>
-                    <p>Исповедуем принципы минимализма и чистоты. Ставим на математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-                    <h3>Выполняем заказы на разработку:</h3>
-                    <ul class="about__list list-orders">
-                        <li class="list-orders__item">Веб-сайтов любой сложности</li>
-                        <li class="list-orders__item">Мобильных приложений для OC и Android</li>
-                        <li class="list-orders__item">Слайшоу и видео для корпоративных презентаций</li>
-                    </ul>
-                </div>
-                <div class="studio__stats">
-                    <img class="stats__img" src="svg/nerds-logo-2.jpg">
-                    <h3>С 2004 года точность во всём:</h3>
-                    <ul>
-                        <li>146% Уровень самоотдачи</li>
-                        <li>100% Соблюдение сроков</li>
-                        <li>50% Минимальная предоплата</li>
-                    </ul>
-                </div>
-            </section>
+    </section>
+</main>
 
-            <section class="projects">
-
-            </section>
-
-        </main>
-
-        <footer class="page-footer">
-            <img src="svg/vk-icon.svg">
-            <img src="svg/fb-icon.svg">
-            <img src="svg/insta-icon.svg">
-
-            <h2>Давайте дружить, это выгодно!</h2>
-            <p>Скидка 10% для друзей из социальных сетей.</p>
-        </footer>
-        -->
+<footer class="page-footer">
+    <section class="socials">
+        <img src="svg/vk-icon.svg">
+        <img src="svg/fb-icon.svg">
+        <img src="svg/insta-icon.svg">
+    </section>
+    <div>
+        <h2>Давайте дружить, это выгодно!</h2>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
     </div>
+</footer>
+
 </body>
 </html>
