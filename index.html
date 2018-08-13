@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.min.css">
 </head>
 <body>
     <header class="page-header">
         <nav class="main-nav">
-            <a class="main-nav__logo" href="#"><img class="main-nav__logo-image" src="images/nerds-logo.svg"></a>
+            <a aria-label="Главная страница" class="main-nav__logo" href="#"><img alt="Nerds" class="main-nav__logo-image" src="images/nerds-logo.svg"></a>
             <ul class="main-nav__list site-list">
-                <li class="site-list__item"><a class="site-list__studio" href="#">Студия</a></li>
-                <li class="site-list__item"><a class="site-list__customers" href="#">Клиенты</a></li>
-                <li class="site-list__item"><a class="site-list__shop" href="#">Магазин</a></li>
-                <li class="site-list__item"><a class="site-list__contacts" href="#">Контакты</a></li>
+                <li class="site-list__item"><a aria-label="Студия" class="site-list__studio" href="#">Студия</a></li>
+                <li class="site-list__item"><a aria-label="Клиенты" class="site-list__customers" href="#">Клиенты</a></li>
+                <li class="site-list__item"><a aria-label="Магазин" class="site-list__shop" href="catalog.html">Магазин</a></li>
+                <li class="site-list__item"><a aria-label="Контакты" class="site-list__contacts" href="#">Контакты</a></li>
             </ul>
             <ul class="main-nav__list user-list">
-                <li><img src="images/cart-icon.svg"></li>
-                <li class="user-list__item">Корзина</li>
+                <li aria-label="Корзина" class="user-list__item"><img alt="Корзина" src="images/cart-icon.svg"> <span>Корзина</span></li>
             </ul>
         </nav>
 
@@ -28,31 +29,31 @@
 
     <main class="main-body">
         <section class="advantages">
-            <h2 class="caption-hidden">Что мы делаем:</h2>
+            <h2 class="visually-hidden">Что мы делаем:</h2>
             <ul class="advantages__list">
                 <li class="advantages__web-sites">
-                    <img src="images/web-sites.png">
+                    <img alt="Веб-сайты" src="images/web-sites.png">
                     <h2>Веб-сайты</h2>
                     <p>Мир никогда не будет преждним после того как увидит наш сайт!</p>
-                    <a href="#" class="order">Заказать</a>
+                    <a aria-label="Заказать веб-сайт" href="#" class="order">Заказать</a>
                 </li>
                 <li class="advantages__apps">
-                    <img src="images/apps.png">
+                    <img alt="Приложения" src="images/apps.png">
                     <h2>Приложения</h2>
                     <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-                    <a href="#" class="order">Заказать</a>
+                    <a aria-label="Заказать приложение" href="#" class="order">Заказать</a>
                 </li>
                 <li class="advantages__presentations">
-                    <img src="images/percentages.png">
+                    <img alt="Презентации" src="images/percentages.png">
                     <h2>Презентации</h2>
                     <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-                    <a href="#" class="order">Заказать</a>
+                    <a aria-label="Заказать презентацию" href="#" class="order">Заказать</a>
                 </li>
             </ul>
         </section>
 
         <section class="studio-about">
-            <h2 class="caption-hidden">О нас</h2>
+            <h2 class="visually-hidden">О нас</h2>
             <b>Мы &#0151; маленькая, но гордая дизайн-студия из Краснодара.</b>
             <p>Исповедуем принципы минимализма и чистоты. Ставим на математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
             <h3>Выполняем заказы на разработку:</h3>
@@ -64,8 +65,8 @@
         </section>
 
         <section class="studio-stats">
-            <h2 class="caption-hidden">Статистика</h2>
-            <img class="stats__img" src="">
+            <h2 class="visually-hidden">Статистика</h2>
+            <img alt="Nerds" class="stats__img" src="">
             <h3>С 2004 года точность во всём:</h3>
             <table class="studio-stats__table">
                 <tbody>
@@ -84,25 +85,35 @@
         </section>
 
         <section class="projects">
-            <h2 class="caption-hidden">Наши проекты</h2>
+            <h2 class="visually-hidden">Наши проекты</h2>
             <ul class="projects__list">
-                <li class="projects__academy"><img src="images/html-acad-logo.png"></li>
-                <li class="projects__borodinski"><img src="images/borodinski-logo.png"></li>
-                <li class="projects__pink"><img src="images/pink-logo.png"></li>
-                <li class=""><img src="images/mishka-logo.png"></li>
+                <li class="projects__academy"><img alt="HTML Academy" src="images/html-acad-logo.png"></li>
+                <li class="projects__borodinski"><img alt="Barbershop Borodinski" src="images/borodinski-logo.png"></li>
+                <li class="projects__pink"><img alt="Pink" src="images/pink-logo.png"></li>
+                <li class="projects__mishka"><img alt="Mishka" src="images/mishka-logo.png"></li>
             </ul>
         </section>
 
         <section class="map">
-            <img src="images/map.png">
+            <section class="map__about">
+                <b>NЁRDS DESIGN STUDIO</b>
+                <p>
+                    191186, Санкт-Петербург,<br>
+                    ул. Б. Конюшенная, д. 19/8
+
+                    <span>тел. +7 (812) 275-75-75</span>
+                </p>
+                <a href="#">Напишите нам</a>
+            </section>
+            <img alt="Карта" src="images/map.png">
         </section>
     </main>
 
     <footer class="page-footer">
         <section class="socials">
-            <img src="images/vk-icon.svg">
-            <img src="images/fb-icon.svg">
-            <img src="images/insta-icon.svg">
+            <a aria-label="ВКонтакте" class="socials__icon" href="#">Вконтакте<img alt="ВКонтакте" src="images/vk-icon.svg"></a>
+            <a aria-label="Фейсбук" class="socials__icon" href="#">Фейсбук<img alt="Фейсбук" src="images/fb-icon.svg"></a>
+            <a aria-label="Инстаграм" class="socials__icon" href="#">Инстаграм<img alt="Инстаграм" src="images/insta-icon.svg"></a>
         </section>
 
         <div>
