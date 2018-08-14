@@ -235,6 +235,18 @@ hr {
     justify-content:space-around;
 }
 
+.projects__list__item {
+    opacity: 0.2;
+}
+
+.projects__list__item:hover {
+    opacity: 1;
+}
+
+.projects__list__item:active {
+    opacity: 0.1;
+}
+
 .page-footer__wrapper {
     display: flex;
 }
@@ -259,4 +271,117 @@ hr {
     margin: 0;
 
     line-height: 22px;
+}
+
+
+/* Слайдер */
+
+.header{
+    padding-top:35px;
+    background:#eeeeee;
+}
+.slider{
+    position:relative;
+    width:1160px;
+    height: 414px;
+    margin:0 auto;
+}
+.slider input[type=radio] {
+    position:absolute;
+    opacity:0;
+}
+.slider-controls{
+    position:absolute;
+    bottom:95px;
+    left:50%;
+    width:200px;
+    height:10px;
+    margin-left:-100px;
+    text-align:center;
+    z-index:1000;
+}
+.slider-controls label{
+    display:inline-block;
+    width:4px;
+    height:4px;
+    margin:0 3px;
+    background:white;
+    border:3px solid white;
+    vertical-align:top;
+    border-radius:50%;
+    cursor:pointer;
+}
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+    background:#c1c1c1;
+}
+.slide{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+.slide-text{
+    width: 560px;
+    padding:30px 0;
+    color:#283136;
+}
+.slide-title{
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: bold;
+    color: black;
+}
+.slide .btn{
+    display:block;
+    width:240px;
+    padding:10px 0;
+    margin-top:25px;
+    font-size:12px;
+    color:white;
+    text-transform:uppercase;
+    text-align:center;
+    text-decoration:none;
+    background:#fb565a;
+    border-radius:3px;
+}
+
+.btn:hover {
+    background-color: #e74246;
+}
+
+.btn:active {
+    color: #e37376;
+    background-color: #d7373b;
+}
+
+.slide:nth-child(1){
+    background-image:url('images/slide1.png');
+    background-repeat:no-repeat;
+    background-position:100% 0;
+}
+.slide:nth-child(2){
+    background-image:url('images/slide2.png');
+    background-repeat:no-repeat;
+    background-position:100% 0;
+}
+.slide:nth-child(3){
+    background-image:url('images/slide3.png');
+    background-repeat:no-repeat;
+    background-position:100% 0;
+}
+.slide{
+    display:none;
+}
+#btn-1:checked ~ .slides .slide:nth-child(1) {
+    display: block;
+}
+#btn-2:checked ~ .slides .slide:nth-child(2) {
+    display: block;
+}
+#btn-3:checked ~ .slides .slide:nth-child(3) {
+    display: block;
 }
