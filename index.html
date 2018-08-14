@@ -9,90 +9,103 @@
 </head>
 <body>
     <header class="page-header">
-        <nav class="main-nav">
-            <a aria-label="Главная страница" class="main-nav__logo" href="#"><img alt="Nerds" class="main-nav__logo-image" src="images/nerds-logo.svg"></a>
-            <ul class="main-nav__list site-list">
-                <li class="site-list__item"><a aria-label="Студия" class="site-list__studio" href="#">Студия</a></li>
-                <li class="site-list__item"><a aria-label="Клиенты" class="site-list__customers" href="#">Клиенты</a></li>
-                <li class="site-list__item"><a aria-label="Магазин" class="site-list__shop" href="catalog.html">Магазин</a></li>
-                <li class="site-list__item"><a aria-label="Контакты" class="site-list__contacts" href="#">Контакты</a></li>
-            </ul>
-            <ul class="main-nav__list user-list">
-                <li aria-label="Корзина" class="user-list__item"><img alt="Корзина" src="images/cart-icon.svg"> <span>Корзина</span></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav class="main-nav">
+                <a aria-label="Главная страница" class="main-nav__logo" href="#"><img alt="Nerds" class="main-nav__logo-image" src="images/nerds-logo.svg" height="65" width="160"></a>
+                <ul class="main-nav__list site-list">
+                    <li class="site-list__item"><a aria-label="Студия" class="site-list__studio" href="#">Студия</a></li>
+                    <li class="site-list__item"><a aria-label="Клиенты" class="site-list__customers" href="#">Клиенты</a></li>
+                    <li class="site-list__item"><a aria-label="Магазин" class="site-list__shop" href="catalog.html">Магазин</a></li>
+                    <li class="site-list__item"><a aria-label="Контакты" class="site-list__contacts" href="#">Контакты</a></li>
+                </ul>
+                <ul class="main-nav__list user-list">
+                    <li aria-label="Корзина" class="user-list__item"><img alt="Корзина" src="images/cart-icon.svg"><a href="#" class="user-list__item">Корзина</a></li>
+                </ul>
+            </nav>
 
-        <div class="slider">
+            <div class="slider">
 
+            </div>
         </div>
     </header>
 
     <main class="main-body">
-        <section class="advantages">
-            <h2 class="visually-hidden">Что мы делаем:</h2>
-            <ul class="advantages__list">
-                <li class="advantages__web-sites">
-                    <img alt="Веб-сайты" src="images/web-sites.png">
-                    <h2>Веб-сайты</h2>
-                    <p>Мир никогда не будет преждним после того как увидит наш сайт!</p>
-                    <a aria-label="Заказать веб-сайт" href="#" class="order">Заказать</a>
-                </li>
-                <li class="advantages__apps">
-                    <img alt="Приложения" src="images/apps.png">
-                    <h2>Приложения</h2>
-                    <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-                    <a aria-label="Заказать приложение" href="#" class="order">Заказать</a>
-                </li>
-                <li class="advantages__presentations">
-                    <img alt="Презентации" src="images/percentages.png">
-                    <h2>Презентации</h2>
-                    <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-                    <a aria-label="Заказать презентацию" href="#" class="order">Заказать</a>
-                </li>
-            </ul>
-        </section>
+        <div class="container">
+            <section class="advantages">
+                <h2 class="visually-hidden">Что мы делаем:</h2>
+                <ul class="advantages__list">
+                    <li class="advantages__web-sites advantages__list-item">
+                        <img alt="Веб-сайты" src="images/web-sites.png">
+                        <h2 class="advantages__h">Веб-сайты</h2>
+                        <p class="advantages__description">Мир никогда не будет преждним после того как увидит наш сайт!</p>
+                        <a aria-label="Заказать веб-сайт" href="#" class="order red">Заказать</a>
+                    </li>
+                    <li class="advantages__apps advantages__list-item">
+                        <img alt="Приложения" src="images/apps.png">
+                        <h2 class="advantages__h">Приложения</h2>
+                        <p class="advantages__description">Покорите топ-10 приложений в AppStore и Google Play</p>
+                        <a aria-label="Заказать приложение" href="#" class="order green">Заказать</a>
+                    </li>
+                    <li class="advantages__presentations advantages__list-item">
+                        <img alt="Презентации" src="images/percentages.png">
+                        <h2 class="advantages__h">Презентации</h2>
+                        <p class="advantages__description">Вы даже не подозреваете, насколько вы изумительны!</p>
+                        <a aria-label="Заказать презентацию" href="#" class="order yellow">Заказать</a>
+                    </li>
+                </ul>
+            </section>
 
-        <section class="studio-about">
-            <h2 class="visually-hidden">О нас</h2>
-            <b>Мы &#0151; маленькая, но гордая дизайн-студия из Краснодара.</b>
-            <p>Исповедуем принципы минимализма и чистоты. Ставим на математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-            <h3>Выполняем заказы на разработку:</h3>
-            <ul class="about__list list-orders">
-                <li class="list-orders__item">Веб-сайтов любой сложности</li>
-                <li class="list-orders__item">Мобильных приложений для OC и Android</li>
-                <li class="list-orders__item">Слайшоу и видео для корпоративных презентаций</li>
-            </ul>
-        </section>
+            <hr class="hr-1">
 
-        <section class="studio-stats">
-            <h2 class="visually-hidden">Статистика</h2>
-            <img alt="Nerds" class="stats__img" src="">
-            <h3>С 2004 года точность во всём:</h3>
-            <table class="studio-stats__table">
-                <tbody>
-                <tr class="percentages">
-                    <td>146<b>%</b></td>
-                    <td>100<b>%</b></td>
-                    <td>50<b>%</b></td>
-                </tr>
-                <tr class="percentages-description">
-                    <td>Уровень самоотдачи</td>
-                    <td>Соблюдение сроков</td>
-                    <td>Минимальная предоплата</td>
-                </tr>
-                </tbody>
-            </table>
-        </section>
+            <div class="about__wrapper">
+                <section class="studio-about">
+                    <h2 class="visually-hidden">О нас</h2>
+                    <b class="studio-about__description">Мы &#0151; маленькая, но гордая<br> дизайн-студия из Краснодара.</b>
+                    <p>Исповедуем принципы минимализма и чистоты. Ставим на математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+                    <h3 class="studio__h">Выполняем заказы на разработку:</h3>
+                    <ul class="about__list">
+                        <li class="about__list__item">Веб-сайтов любой сложности</li>
+                        <li class="about__list__item">Мобильных приложений для OC и Android</li>
+                        <li class="about__list__item">Слайшоу и видео для корпоративных презентаций</li>
+                    </ul>
+                </section>
 
-        <section class="projects">
-            <h2 class="visually-hidden">Наши проекты</h2>
-            <ul class="projects__list">
-                <li class="projects__academy"><img alt="HTML Academy" src="images/html-acad-logo.png"></li>
-                <li class="projects__borodinski"><img alt="Barbershop Borodinski" src="images/borodinski-logo.png"></li>
-                <li class="projects__pink"><img alt="Pink" src="images/pink-logo.png"></li>
-                <li class="projects__mishka"><img alt="Mishka" src="images/mishka-logo.png"></li>
-            </ul>
-        </section>
+                <section class="studio-stats">
+                    <h2 class="visually-hidden">Статистика</h2>
+                    <img alt="Nerds" class="stats__img" src="images/nerds-illustration.png" height="208" width="360">
+                    <h3 class="studio__h">С 2004 года точность во всём:</h3>
+                    <table class="studio-stats__table">
+                        <tbody>
+                        <tr class="percentages">
+                            <td>146<b>%</b></td>
+                            <td>100<b>%</b></td>
+                            <td>50<b>%</b></td>
+                        </tr>
+                        <tr class="percentages-description">
+                            <td>Уровень самоотдачи</td>
+                            <td>Соблюдение сроков</td>
+                            <td>Минимальная предоплата</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+
+            <hr class="hr-2">
+
+            <section class="projects">
+                <h2 class="visually-hidden">Наши проекты</h2>
+                    <ul class="projects__list">
+                        <li class="projects__academy"><img alt="HTML Academy" src="images/html-acad-logo.png"></li>
+                        <li class="projects__borodinski"><img alt="Barbershop Borodinski" src="images/borodinski-logo.png"></li>
+                        <li class="projects__pink"><img alt="Pink" src="images/pink-logo.png"></li>
+                        <li class="projects__mishka"><img alt="Mishka" src="images/mishka-logo.png"></li>
+                    </ul>
+            </section>
+
+            <hr class="hr-3">
+
+        </div>
 
         <section class="map">
             <section class="map__about">
@@ -110,15 +123,16 @@
     </main>
 
     <footer class="page-footer">
-        <section class="socials">
-            <a aria-label="ВКонтакте" class="socials__icon" href="#">Вконтакте<img alt="ВКонтакте" src="images/vk-icon.svg"></a>
-            <a aria-label="Фейсбук" class="socials__icon" href="#">Фейсбук<img alt="Фейсбук" src="images/fb-icon.svg"></a>
-            <a aria-label="Инстаграм" class="socials__icon" href="#">Инстаграм<img alt="Инстаграм" src="images/insta-icon.svg"></a>
-        </section>
-
-        <div>
-            <b>Давайте дружить, это выгодно!</b>
-            <p>Скидка 10% для друзей из социальных сетей.</p>
+        <div class="container page-footer__wrapper">
+            <section class="socials">
+                <a aria-label="ВКонтакте" class="socials__icon" href="#">Вконтакте<img alt="ВКонтакте" src="images/vk-icon.svg"></a>
+                <a aria-label="Фейсбук" class="socials__icon" href="#">Фейсбук<img alt="Фейсбук" src="images/fb-icon.svg"></a>
+                <a aria-label="Инстаграм" class="socials__icon" href="#">Инстаграм<img alt="Инстаграм" src="images/insta-icon.svg"></a>
+            </section>
+            <section class="friends">
+                <b class="friends__go">Давайте дружить, это выгодно!</b>
+                <p class="friends__paragraph">Скидка 10% для друзей из социальных сетей.</p>
+            </section>
         </div>
     </footer>
 </body>
