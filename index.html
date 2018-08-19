@@ -12,50 +12,52 @@
         <div class="container">
             <nav class="main-nav">
                 <a aria-label="Главная страница" class="main-nav__logo" href="#"><img alt="Nerds" class="main-nav__logo-image" src="images/nerds-logo.svg" height="65" width="160"></a>
-                <ul class="main-nav__list site-list">
-                    <li class="site-list__item"><a aria-label="Студия" class="site-list__studio" href="#">Студия</a></li>
-                    <li class="site-list__item"><a aria-label="Клиенты" class="site-list__customers" href="#">Клиенты</a></li>
-                    <li class="site-list__item"><a aria-label="Магазин" class="site-list__shop" href="catalog.html">Магазин</a></li>
-                    <li class="site-list__item"><a aria-label="Контакты" class="site-list__contacts" href="#">Контакты</a></li>
+                <ul class="site-list">
+                    <li class="site-list__item"><a aria-label="Студия" class="site-list__studio list-decorations" href="#">Студия</a></li>
+                    <li class="site-list__item"><a aria-label="Клиенты" class="site-list__customers list-decorations" href="#">Клиенты</a></li>
+                    <li class="site-list__item"><a aria-label="Магазин" class="site-list__shop list-decorations" href="catalog.html">Магазин</a></li>
+                    <li class="site-list__item"><a aria-label="Контакты" class="site-list__contacts list-decorations" href="#">Контакты</a></li>
                 </ul>
-                <ul class="main-nav__list user-list">
-                    <li aria-label="Корзина" class="user-list__item"><img alt="Корзина" src="images/cart-icon.svg"><a href="#" class="user-list__item">Корзина</a></li>
+                <ul class="user-list">
+                    <li aria-label="Корзина" class="user-list__item"><a href="#" aria-label="Корзина" class="user-list__cart-link list-decorations"><img alt="Корзина" src="images/cart-icon.svg" class="user-list__cart">Корзина</a></li>
                 </ul>
             </nav>
         </div>
         <div class="header">
-            <div class="slider">
-                <input type="radio" id="btn-1" name="toggle" checked>
-                <input type="radio" id="btn-2" name="toggle">
-                <input type="radio" id="btn-3" name="toggle">
-                <div class="slider-controls">
-                    <label for="btn-1"></label>
-                    <label for="btn-2"></label>
-                    <label for="btn-3"></label>
-                </div>
-                <div class="slides">
-                    <div class="slide">
-                        <div class="slide-text">
-                            <div class="slide-title">Долго, дорого, скрупулезно</div>
-                            <p>Математически выверенный дизайн<br>
-                                для вашего сайта или мобильного приложения.</p>
-                            <a class="btn" href="#">Узнать больше</a>
-                        </div>
+            <div class="container">
+                <div class="slider">
+                    <input type="radio" id="btn-1" name="toggle" checked>
+                    <input type="radio" id="btn-2" name="toggle">
+                    <input type="radio" id="btn-3" name="toggle">
+                    <div class="slider-controls">
+                        <label for="btn-1"></label>
+                        <label for="btn-2"></label>
+                        <label for="btn-3"></label>
                     </div>
-                    <div class="slide">
-                        <div class="slide-text">
-                            <div class="slide-title">Любим математику как никто другой</div>
-                            <p>Никакого креатива, только математические формулы<br>
-                                для расчета идеальных пропорций.</p>
-                            <a class="btn" href="#">Узнать больше</a>
+                    <div class="slides">
+                        <div class="slide">
+                            <div class="slide-text">
+                                <div class="slide-title">Долго, дорого, скрупулезно</div>
+                                <p>Математически выверенный дизайн<br>
+                                    для вашего сайта или мобильного приложения.</p>
+                                <a class="btn" href="#">Узнать больше</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide-text">
-                            <div class="slide-title">Только ночь,<br>только хардкор</div>
-                            <p>Работать днем, как все? Мы против этого.<br>
-                                Ближе к полуночи работа только начинается.</p>
-                            <a class="btn" href="#">Узнать больше</a>
+                        <div class="slide">
+                            <div class="slide-text">
+                                <div class="slide-title">Любим математику как никто другой</div>
+                                <p>Никакого креатива, только математические формулы<br>
+                                    для расчета идеальных пропорций.</p>
+                                <a class="btn" href="#">Узнать больше</a>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-text">
+                                <div class="slide-title">Только ночь,<br>только хардкор</div>
+                                <p>Работать днем, как все? Мы против этого.<br>
+                                    Ближе к полуночи работа только начинается.</p>
+                                <a class="btn" href="#">Узнать больше</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -94,13 +96,13 @@
             <div class="about__wrapper">
                 <section class="studio-about">
                     <h2 class="visually-hidden">О нас</h2>
-                    <b class="studio-about__description">Мы &#0151; маленькая, но гордая<br> дизайн-студия из Краснодара.</b>
+                    <b class="studio-about__description">Мы &#0151; маленькая, но гордая дизайн-студия из Краснодара.</b>
                     <p>Исповедуем принципы минимализма и чистоты. Ставим на математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
                     <h3 class="studio__h">Выполняем заказы на разработку:</h3>
-                    <ul class="about__list">
-                        <li class="about__list__item">Веб-сайтов любой сложности</li>
-                        <li class="about__list__item">Мобильных приложений для OC и Android</li>
-                        <li class="about__list__item">Слайшоу и видео для корпоративных презентаций</li>
+                    <ul class="about-list">
+                        <li class="about-list__item"><span class="about-list__style"></span>Веб-сайтов любой сложности</li>
+                        <li class="about-list__item"><span class="about-list__style"></span>Мобильных приложений для OC и Android</li>
+                        <li class="about-list__item"><span class="about-list__style"></span>Слайшоу и видео для корпоративных презентаций</li>
                     </ul>
                 </section>
 
@@ -111,9 +113,9 @@
                     <table class="studio-stats__table">
                         <tbody>
                         <tr class="percentages">
-                            <td>146<b>%</b></td>
-                            <td>100<b>%</b></td>
-                            <td>50<b>%</b></td>
+                            <td>146<sup>%</sup></td>
+                            <td>100<sup>%</sup></td>
+                            <td>50<sup>%</sup></td>
                         </tr>
                         <tr class="percentages-description">
                             <td>Уровень самоотдачи</td>
@@ -142,26 +144,32 @@
         </div>
 
         <section class="map">
-            <section class="map__about">
-                <b>NЁRDS DESIGN STUDIO</b>
-                <p>
-                    191186, Санкт-Петербург,<br>
-                    ул. Б. Конюшенная, д. 19/8
+            <div class="container">
+                <section class="map__about">
+                    <b class="map__about__nerds">NЁRDS DESIGN STUDIO</b>
+                    <p class="map__about__contacts">
+                        191186, Санкт-Петербург,<br>
+                        ул. Б. Конюшенная, д. 19/8
 
-                    <span>тел. +7 (812) 275-75-75</span>
-                </p>
-                <a href="#">Напишите нам</a>
-            </section>
-            <img alt="Карта" src="images/map.png">
+                        <span class="telephone">тел. +7 (812) 275-75-75</span>
+                    </p>
+                    <a href="#" class="btn">Напишите нам</a>
+                </section>
+            </div>
+            <div class="map-container">
+                <img class="map__image" alt="Карта" src="images/map.png">
+            </div>
         </section>
     </main>
 
     <footer class="page-footer">
         <div class="container page-footer__wrapper">
             <section class="socials">
-                <a aria-label="ВКонтакте" class="socials__icon" href="#">Вконтакте<img alt="ВКонтакте" src="images/vk-icon.svg"></a>
-                <a aria-label="Фейсбук" class="socials__icon" href="#">Фейсбук<img alt="Фейсбук" src="images/fb-icon.svg"></a>
-                <a aria-label="Инстаграм" class="socials__icon" href="#">Инстаграм<img alt="Инстаграм" src="images/insta-icon.svg"></a>
+                <ul class="socials__list">
+                    <li class="socials__list__item"><a aria-label="ВКонтакте" class="socials__icon" href="#"><span class="visually-hidden">Вконтакте</span><img alt="ВКонтакте" src="images/vk-icon.svg" class="social-vk social-img"></a></li>
+                    <li class="socials__list__item"><a aria-label="Фейсбук" class="socials__icon" href="#"><span class="visually-hidden">Фейсбук</span><img alt="Фейсбук" src="images/fb-icon.svg" class="social-fb social-img"></a></li>
+                    <li class="socials__list__item"><a aria-label="Инстаграм" class="socials__icon" href="#"><span class="visually-hidden">Инстаграм</span><img alt="Инстаграм" src="images/insta-icon.svg" class="social-inst social-img"></a></li>
+                </ul>
             </section>
             <section class="friends">
                 <b class="friends__go">Давайте дружить, это выгодно!</b>
