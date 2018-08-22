@@ -9,124 +9,158 @@
 </head>
 <body>
     <header class="page-header">
-        <nav class="main-nav">
-            <a aria-label="Главная страница" class="main-nav__logo" href="#"><img alt="Nerds" class="main-nav__logo-image" src="images/nerds-logo.svg"></a>
-            <ul class="main-nav__list site-list">
-                <li class="site-list__item"><a aria-label="Студия" class="site-list__studio" href="#">Студия</a></li>
-                <li class="site-list__item"><a aria-label="Клиенты" class="site-list__customers" href="#">Клиенты</a></li>
-                <li class="site-list__item"><a aria-label="Магазин" class="site-list__shop site-lite--active" href="catalog.html">Магазин</a></li>
-                <li class="site-list__item"><a aria-label="Контакты" class="site-list__contacts" href="#">Контакты</a></li>
-            </ul>
-            <ul class="main-nav__list user-list">
-                <li aria-label="Корзина" class="user-list__item"><img alt="Корзина" src="images/cart-icon.svg"> <span>Корзина</span></li>
-            </ul>
-        </nav>
-        <h1>Магазин готовых шаблонов</h1>
+        <div class="container">
+            <nav class="main-nav">
+                <a aria-label="Главная страница" class="main-nav__logo" href="#"><img alt="Nerds" class="main-nav__logo-image" src="images/nerds-logo.svg" height="65" width="160"></a>
+                <ul class="site-list">
+                    <li class="site-list__item"><a aria-label="Студия" class="site-list__studio list-decorations" href="#">Студия</a></li>
+                    <li class="site-list__item"><a aria-label="Клиенты" class="site-list__customers list-decorations" href="#">Клиенты</a></li>
+                    <li class="site-list__item"><a aria-label="Магазин" class="site-list__shop list-decorations" href="catalog.html">Магазин</a></li>
+                    <li class="site-list__item"><a aria-label="Контакты" class="site-list__contacts list-decorations" href="#">Контакты</a></li>
+                </ul>
+                <ul class="user-list">
+                    <li aria-label="Корзина" class="user-list__item"><a href="#" aria-label="Корзина" class="user-list__cart-link list-decorations"><img alt="Корзина" src="images/cart-icon.svg" class="user-list__cart">Корзина</a></li>
+                </ul>
+            </nav>
+            <h1 class="shop-description">Магазин готовых шаблонов</h1>
+        </div>
     </header>
     <main>
-        <section class="section-filter">
-            <form method="post" class="filter">
-                <label for="cost">Стоимость:</label>
-                <input id="cost" type="range" name="radio">
-                от до
-                <fieldset>
-                    <legend>Сетка:</legend>
-                    <ul>
-                        <li class="filter__type">
-                            <input type="radio" name="radio" id="filter__type-adaptive" class="visually-hidden" checked>
-                            <label for="filter__type-adaptive">Адаптивная</label>
-                        </li>
-                        <li class="filter__type">
-                            <input type="radio" name="radio" id="filter__type-fixed" class="visually-hidden">
-                            <label for="filter__type-fixed">Фиксированная</label>
-                        </li>
-                        <li class="filter__type">
-                            <input type="radio" name="radio" id="filter__type-rubber" class="visually-hidden">
-                            <label for="filter__type-rubber">Резиновая</label>
-                        </li>
+        <div class="container">
+            <section class="section-filter">
+                <form method="post" class="filter">
+                    <label for="cost">Стоимость:</label>
+                    <input id="cost" type="range" name="radio">
+                    от до
+                    <fieldset>
+                        <legend>Сетка:</legend>
+                        <ul>
+                            <li class="filter__type">
+                                <input type="radio" name="radio" id="filter__type-adaptive" class="visually-hidden" checked>
+                                <label for="filter__type-adaptive">Адаптивная</label>
+                            </li>
+                            <li class="filter__type">
+                                <input type="radio" name="radio" id="filter__type-fixed" class="visually-hidden">
+                                <label for="filter__type-fixed">Фиксированная</label>
+                            </li>
+                            <li class="filter__type">
+                                <input type="radio" name="radio" id="filter__type-rubber" class="visually-hidden">
+                                <label for="filter__type-rubber">Резиновая</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Особенности:</legend>
+                        <ul>
+                            <li class="filter__type">
+                                <input type="checkbox" name="radio" id="filter__type-slider" class="visually-hidden" checked>
+                                <label for="filter__type-slider">Слайдер</label>
+                            </li>
+                            <li class="filter__type">
+                                <input type="checkbox" name="radio" id="filter__type-advantages" class="visually-hidden">
+                                <label for="filter__type-advantages">Блок преимуществ</label>
+                            </li>
+                            <li class="filter__type">
+                                <input type="checkbox" name="radio" id="filter__type-news" class="visually-hidden" checked>
+                                <label for="filter__type-news">Новости</label>
+                            </li>
+                            <li class="filter__type">
+                                <input type="checkbox" name="radio" id="filter__type-gallery" class="visually-hidden">
+                                <label for="filter__type-gallery">Галерея</label>
+                            </li>
+                            <li class="filter__type">
+                                <input type="checkbox" name="radio" id="filter__type-cart" class="visually-hidden">
+                                <label for="filter__type-cart">Корзина</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button type="submit" class="filter__button">Покаазать</button>
+                </form>
+            </section>
+            <section class="section-templates">
+                <nav class="templates__navigation">
+                    <b>Сортировать:</b>
+                    <ul class="templates__sort">
+                        <li class="sort__item"><a class="sort__item--active" href="#">По цене</a></li>
+                        <li class="sort__item"><a href="#">По типу</a></li>
+                        <li class="sort__item"><a href="#">По названию</a></li>
                     </ul>
-                </fieldset>
-                <fieldset>
-                    <legend>Особенности:</legend>
-                    <ul>
-                        <li class="filter__type">
-                            <input type="checkbox" name="radio" id="filter__type-slider" class="visually-hidden" checked>
-                            <label for="filter__type-slider">Слайдер</label>
-                        </li>
-                        <li class="filter__type">
-                            <input type="checkbox" name="radio" id="filter__type-advantages" class="visually-hidden">
-                            <label for="filter__type-advantages">Блок преимуществ</label>
-                        </li>
-                        <li class="filter__type">
-                            <input type="checkbox" name="radio" id="filter__type-news" class="visually-hidden" checked>
-                            <label for="filter__type-news">Новости</label>
-                        </li>
-                        <li class="filter__type">
-                            <input type="checkbox" name="radio" id="filter__type-gallery" class="visually-hidden">
-                            <label for="filter__type-gallery">Галерея</label>
-                        </li>
-                        <li class="filter__type">
-                            <input type="checkbox" name="radio" id="filter__type-cart" class="visually-hidden">
-                            <label for="filter__type-cart">Корзина</label>
-                        </li>
-                    </ul>
-                </fieldset>
-                <button type="submit" class="filter__button">Покаазать</button>
-            </form>
-        </section>
-        <section class="section-templates">
-            <nav class="templates__navigation">
-                <b>Сортировать:</b>
-                <ul class="templates__sort">
-                    <li class="sort__item"><a class="sort__item--active" href="#">По цене</a></li>
-                    <li class="sort__item"><a href="#">По типу</a></li>
-                    <li class="sort__item"><a href="#">По названию</a></li>
-                </ul>
-                <p>
+                    <p>
 
-                </p>
-            </nav>
-            <ul class="templates">
-                <li class="templates__item"><a href="#"><img alt="Макет Sedona" src="images/img-sedona.jpg"></a></li>
-                <li class="templates__item"><a href="#"><img alt="Макет Pink" src="images/img-pink.jpg"></a></li>
-                <li class="templates__item"><a href="#"><img alt="Макет Barbershop" src="images/img-barbershop.jpg"></a></li>
-                <li class="templates__item"><a href="#"><img alt="Макет Mishka" src="images/img-mishka.jpg"></a></li>
-                <li class="templates__item"><a href="#"><img alt="Макет Aplus" src="images/img-aplus.jpg"></a></li>
-                <li class="templates__item"><a href="#"><img alt="Макет Kvast" src="images/img-kvast.jpg"></a></li>
-            </ul>
-            <nav class="templates__page">
-                <a href="#" class="templates__page--active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">Следующая</a>
-            </nav>
-        </section>
+                    </p>
+                </nav>
+                <ul class="templates">
+                    <li class="templates__item"><a href="#"><img alt="Макет Sedona" src="images/img-sedona.jpg"></a></li>
+                    <li class="templates__item"><a href="#"><img alt="Макет Pink" src="images/img-pink.jpg"></a></li>
+                    <li class="templates__item"><a href="#"><img alt="Макет Barbershop" src="images/img-barbershop.jpg"></a></li>
+                    <li class="templates__item"><a href="#"><img alt="Макет Mishka" src="images/img-mishka.jpg"></a></li>
+                    <li class="templates__item"><a href="#"><img alt="Макет Aplus" src="images/img-aplus.jpg"></a></li>
+                    <li class="templates__item"><a href="#"><img alt="Макет Kvast" src="images/img-kvast.jpg"></a></li>
+                </ul>
+                <nav class="templates__page">
+                    <a href="#" class="templates__page--active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">Следующая</a>
+                </nav>
+            </section>
+        </div>
 
         <section class="map">
-            <section class="map__about">
-                <b>NЁRDS DESIGN STUDIO</b>
-                <p>
-                    191186, Санкт-Петербург,<br>
-                    ул. Б. Конюшенная, д. 19/8
+            <div class="container">
+                <section class="map__about">
+                    <b class="map__about__nerds">NЁRDS DESIGN STUDIO</b>
+                    <p class="map__about__contacts">
+                        191186, Санкт-Петербург,<br>
+                        ул. Б. Конюшенная, д. 19/8
 
-                    <span>тел. +7 (812) 275-75-75</span>
-                </p>
-                <a href="#">Напишите нам</a>
-            </section>
-            <img alt="Карта" src="images/map.png">
+                        <span class="telephone">тел. +7 (812) 275-75-75</span>
+                    </p>
+                    <a href="#" class="btn popup-feedback">Напишите нам</a>
+                </section>
+            </div>
+            <div class="map-container">
+                <img class="map__image" alt="Карта" src="images/map.png">
+            </div>
         </section>
     </main>
-    <footer class="page-footer">
-        <section class="socials">
-            <a aria-label="ВКонтакте" class="socials__icon" href="#">Вконтакте<img alt="ВКонтакте" src="images/vk-icon.svg"></a>
-            <a aria-label="Фейсбук" class="socials__icon" href="#">Фейсбук<img alt="Фейсбук" src="images/fb-icon.svg"></a>
-            <a aria-label="Инстаграм" class="socials__icon" href="#">Инстаграм<img alt="Инстаграм" src="images/insta-icon.svg"></a>
-        </section>
 
-        <div>
-            <b>Давайте дружить, это выгодно!</b>
-            <p>Скидка 10% для друзей из социальных сетей.</p>
+    <footer class="page-footer">
+        <div class="container page-footer__wrapper">
+            <section class="socials">
+                <ul class="socials__list">
+                    <li class="socials__list__item"><a aria-label="ВКонтакте" class="socials__icon" href="#"><span class="visually-hidden">Вконтакте</span><img alt="ВКонтакте" src="images/vk-icon.svg" class="social-vk social-img"></a></li>
+                    <li class="socials__list__item"><a aria-label="Фейсбук" class="socials__icon" href="#"><span class="visually-hidden">Фейсбук</span><img alt="Фейсбук" src="images/fb-icon.svg" class="social-fb social-img"></a></li>
+                    <li class="socials__list__item"><a aria-label="Инстаграм" class="socials__icon" href="#"><span class="visually-hidden">Инстаграм</span><img alt="Инстаграм" src="images/insta-icon.svg" class="social-inst social-img"></a></li>
+                </ul>
+            </section>
+            <section class="friends">
+                <b class="friends__go">Давайте дружить, это выгодно!</b>
+                <p class="friends__paragraph">Скидка 10% для друзей из социальных сетей.</p>
+            </section>
         </div>
     </footer>
+
+    <section class="feedback">
+        <h2 class="feedback__h2">Напишите нам</h2>
+        <a class="feedback-form__close">Закрыть</a>
+        <form class="feedback-form" method="post" >
+            <p class="feedback-form__name-paragraph">
+                <label for="feedback-form__name-id">Ваше имя:</label>
+                <input id="feedback-form__name-id" name="name" type="text" placeholder="Имя Фамилия">
+            </p>
+            <p class="feedback-form_mail-paragraph">
+                <label for="feedback-form__e-mail-id">Ваш e-mail:</label>
+                <input id="feedback-form__e-mail-id" name="e-mail" type="text" placeholder="email@example.com">
+            </p>
+            <p class="feedback-form_text-paragraph">
+                <label for="feedback-form__text-id">Текст письма:</label>
+                <textarea id="feedback-form__text-id" name="text" placeholder="В свободной форме" style="width: 760px; height: 115px" ></textarea>
+            </p>
+            <button type="submit" class="btn">Отправить</button>
+        </form>
+    </section>
+
+    <script src="popup-feedback.js"></script>
 </body>
 </html>

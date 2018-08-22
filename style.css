@@ -402,7 +402,6 @@ hr {
     }
 }
 
-
 .page-footer {
     padding-bottom: 70px;
 }
@@ -489,6 +488,126 @@ hr {
     line-height: 22px;
 
     color: #444444;
+}
+
+
+/* Обратная связь */
+
+.feedback {
+    display: none;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 960px;
+    height: 590px;
+    box-sizing: border-box;
+    padding: 65px 100px 80px 100px;
+
+    color: #000000;
+    background-color: #ffffff;
+
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+
+}
+
+.feedback-show {
+    display: block;
+    /*
+    animation-name: bounce;
+    animation-duration: 0.6s;
+*/
+}
+
+.feedback__h2 {
+    margin: 0;
+    padding: 0;
+
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.feedback-form {
+    margin-top: 40px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feedback-form__name-paragraph,
+.feedback-form_mail-paragraph {
+    width: 360px;
+}
+
+#feedback-form__e-mail-id,
+#feedback-form__name-id{
+    display: block;
+    width: 340px;
+    padding: 10px;
+
+    font: inherit;
+}
+
+.feedback-form label {
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.feedback .btn {
+    margin-top: 30px;
+    border: none;
+}
+
+.feedback .btn:active {
+    border: none;
+}
+
+.feedback-form__close {
+    position: absolute;
+    top: 85px;
+    right: 60px;
+
+    width: 25px;
+    height: 25px;
+
+    font-size: 0;
+
+    background-color: transparent;
+    border: 0;
+
+    cursor: pointer;
+}
+
+.feedback-form__close::before,
+.feedback-form__close::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 25px;
+    height: 3px;
+
+    background-color: #fb565a;
+    opacity: 0.3;
+}
+
+.feedback-form__close::before {
+    transform: rotate(45deg);
+}
+
+.feedback-form__close::after {
+    transform: rotate(-45deg);
+}
+
+
+.feedback-form__close:focus {
+    outline: none;
 }
 
 
@@ -590,4 +709,14 @@ hr {
 }
 #btn-3:checked ~ .slides .slide:nth-child(3) {
     display: block;
+}
+
+
+/* Анимации */
+
+@keyframes bounce {
+    0% { transform: translateY(-2000px)}
+    70% { transform: translateY(30px)}
+    90% { transform: translateY(-10px)}
+    100% { transform: translateY(0)}
 }

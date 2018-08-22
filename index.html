@@ -153,7 +153,7 @@
 
                         <span class="telephone">тел. +7 (812) 275-75-75</span>
                     </p>
-                    <a href="#" class="btn">Напишите нам</a>
+                    <a href="#" class="btn popup-feedback">Напишите нам</a>
                 </section>
             </div>
             <div class="map-container">
@@ -177,5 +177,29 @@
             </section>
         </div>
     </footer>
+
+    <section class="feedback">
+        <h2 class="feedback__h2">Напишите нам</h2>
+        <a class="feedback-form__close">Закрыть</a>
+        <form class="feedback-form" method="post" >
+            <p class="feedback-form__name-paragraph">
+                <label for="feedback-form__name-id">Ваше имя:</label>
+                <input id="feedback-form__name-id" name="name" type="text" placeholder="Имя Фамилия">
+            </p>
+            <p class="feedback-form_mail-paragraph">
+                <label for="feedback-form__e-mail-id">Ваш e-mail:</label>
+                <input id="feedback-form__e-mail-id" name="e-mail" type="text" placeholder="email@example.com">
+            </p>
+            <p class="feedback-form_text-paragraph">
+                <label for="feedback-form__text-id">Текст письма:</label>
+                <textarea id="feedback-form__text-id" name="text" placeholder="В свободной форме" style="width: 760px; height: 115px" ></textarea>
+            </p>
+            <button type="submit" class="btn">Отправить</button>
+        </form>
+    </section>
+
+
+    <script src="popup-feedback.js"></script>
 </body>
+
 </html>
