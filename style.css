@@ -579,7 +579,7 @@ hr {
     background-color: transparent;
     border: 0;
 
-    cursor: pointer;
+/*    cursor: pointer;*/
 }
 
 .feedback-form__close::before,
@@ -587,7 +587,7 @@ hr {
     content: "";
 
     position: absolute;
-    top: 0;
+    top: 7px;
     right: 0;
 
     width: 25px;
@@ -604,12 +604,6 @@ hr {
 .feedback-form__close::after {
     transform: rotate(-45deg);
 }
-
-
-.feedback-form__close:focus {
-    outline: none;
-}
-
 
 /* Слайдер */
 
@@ -720,3 +714,140 @@ hr {
     90% { transform: translateY(-10px)}
     100% { transform: translateY(0)}
 }
+
+
+/* Стилизация страницы магазина */
+
+.shop-description {
+    font-size: 55px;
+    line-height: 55px;
+}
+
+.main-catalog__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-filter {
+    width: 260px;
+}
+
+.section-templates {
+    width: 760px;
+}
+
+.templates__navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.templates__sort {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    width: 360px;
+
+    list-style: none;
+}
+
+.sort__item {
+    margin-right: 20px;
+}
+
+.templates {
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.templates__item {
+    margin-top: 33px;
+
+    display: block;
+    width: 360px;
+}
+
+
+.form__cost {
+    font-weight: bold;
+}
+
+/*Фильтр в магазине*/
+.range-filter {
+    width: 240px;
+    margin: 50px auto; /* для демонстрации */
+}
+
+.range-controls {
+    position: relative;
+    height: 41px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background: #f1f1f1;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background: #d7dcde;
+}
+
+.range-controls .bar {
+    width: 70%;
+    height: 2px;
+    background: #00ca74;
+}
+
+.range-controls .toggle {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 4px;
+    height: 4px;
+    cursor: pointer;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    background: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+.range-controls .toggle-min {
+    left: 50px;
+}
+
+.range-controls .toggle-max {
+    left: 110px;
+}
+
+.price-controls {
+    font-size: 0;
+}
+
+.price-controls label {
+    font-size: 16px;
+    display: inline-block;
+    width: 50%;
+}
+
+.max-price {
+    text-align: right;
+}
+
+.price-controls input {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 16px;
+    width: 60px;
+    margin-left: 10px;
+    padding: 8px 10px;
+    text-align: center;
+    color: #283136;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
+}
+
