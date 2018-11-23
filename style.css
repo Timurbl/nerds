@@ -721,6 +721,7 @@ hr {
 .shop-description {
     font-size: 55px;
     line-height: 55px;
+
 }
 
 .main-catalog__container {
@@ -741,7 +742,7 @@ hr {
     justify-content: space-between;
 }
 
-.templates__sort {
+.sort {
     margin: 0;
     padding: 0;
 
@@ -753,6 +754,38 @@ hr {
 
 .sort__item {
     margin-right: 20px;
+
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.sort__href {
+    color: #b2b2b2;
+    text-decoration: none;
+}
+
+.sort__href--active {
+    color: #000000;
+    cursor: default;
+}
+
+.sort__href:hover {
+    color: #d6d6d6;
+}
+
+.sort__href:active {
+    color: #888888;
+}
+
+.sort__href--active:active {
+    color: #000000;
+    cursor: default;
+}
+
+.sort__href--active:hover {
+    color: #000000;
+    cursor: default;
 }
 
 .templates {
@@ -770,15 +803,67 @@ hr {
     width: 360px;
 }
 
-
 .form__cost {
     font-weight: bold;
 }
 
+.templates__page {
+    margin-bottom: 60px;
+}
+
+.page_btn {
+    display: inline-block;
+
+    background-color: #eeeeee;
+    color: #000000;
+
+    width: 50px;
+    height: 53px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    margin-right: 20px;
+
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.page_btn:active {
+    background-color: #d5d5d5;
+}
+
+.page_btn:hover {
+    background-color: #dfdfdf;
+}
+
+.page_btn--active {
+    width: 50px;
+    height: 55px;
+    box-sizing: border-box;
+    border: 3px solid #eeeeee;
+    background-color: #ffffff;
+
+    cursor: default;
+}
+.page_btn--active:hover {
+    background-color: #ffffff;
+}
+
+.page_btn--active:active {
+    background-color: #ffffff;
+}
+
+.page_btn_next {
+    padding: 15px 77px;
+    width: 250px;
+}
+
+
+
 /*Фильтр в магазине*/
 .range-filter {
     width: 240px;
-    margin: 50px auto; /* для демонстрации */
+    margin-top: 50px;
+    margin-bottom: 55px;
 }
 
 .range-controls {
