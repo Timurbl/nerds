@@ -14,8 +14,8 @@
                 <a aria-label="Главная страница" class="main-nav__logo" href="index.html"><img alt="Nerds" class="main-nav__logo-image" src="images/nerds-logo.svg" height="65" width="160"></a>
                 <ul class="site-list">
                     <li class="site-list__item"><a aria-label="Студия" class="site-list__studio list-decorations" href="#">Студия</a></li>
-                    <li class="site-list__item"><a aria-label="Клиенты" class="site-list__customers list-decorations" href="#">Клиенты</a></li>
-                    <li class="site-list__item"><a aria-label="Магазин" class="site-list__shop list-decorations" href="catalog.html">Магазин</a></li>
+                    <li class="site-list__item"><a aria-label="Клиенты" class="site-list__customers list-decorations " href="#">Клиенты</a></li>
+                    <li class="site-list__item"><a aria-label="Магазин" class="site-list__shop list-decorations site-list__item--active" href="catalog.html">Магазин</a></li>
                     <li class="site-list__item"><a aria-label="Контакты" class="site-list__contacts list-decorations" href="#">Контакты</a></li>
                 </ul>
                 <ul class="user-list">
@@ -101,12 +101,72 @@
                     </ul>
                 </nav>
                 <ul class="templates">
-                    <li class="templates__item"><a href="#"><img alt="Макет Sedona" src="images/img-sedona.jpg"></a></li>
-                    <li class="templates__item"><a href="#"><img alt="Макет Pink" src="images/img-pink.jpg"></a></li>
-                    <li class="templates__item"><a href="#"><img alt="Макет Barbershop" src="images/img-barbershop.jpg"></a></li>
-                    <li class="templates__item"><a href="#"><img alt="Макет Mishka" src="images/img-mishka.jpg"></a></li>
-                    <li class="templates__item"><a href="#"><img alt="Макет Aplus" src="images/img-aplus.jpg"></a></li>
-                    <li class="templates__item"><a href="#"><img alt="Макет Kvast" src="images/img-kvast.jpg"></a></li>
+                    <li class="templates__item">
+                        <a class="templates__link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#e9e9e9" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                            <img alt="Макет Sedona" src="images/img-sedona.jpg">
+                        </a>
+                        <div class="item__description visually-hidden">
+                            <h2 class="name_of_template">SEDONA</h2>
+                            <p>Информационный сайт<br>для туристов</p>
+                            <a href="#" class="btn">9 900 РУБ.</a>
+                        </div>
+                    </li>
+                    <li class="templates__item">
+                        <a class="templates__link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#e9e9e9" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                            <img alt="Макет Pink" src="images/img-pink.jpg">
+                        </a>
+                        <div class="item__description visually-hidden">
+                            <h2 class="name_of_template">PINK</h2>
+                            <p>Информационный сайт<br>для туристов</p>
+                            <a href="#" class="btn">9 900 РУБ.</a>
+                        </div>
+                    </li>
+                    <li class="templates__item">
+                        <a class="templates__link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#e9e9e9" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                            <img alt="Макет Barbershop" src="images/img-barbershop.jpg">
+                        </a>
+                        <div class="item__description visually-hidden">
+                            <h2 class="name_of_template">BARBERSHOP</h2>
+                            <p>Информационный сайт<br>для туристов</p>
+                            <a href="#" class="btn">9 900 РУБ.</a>
+                        </div>
+                    </li>
+                    <li class="templates__item">
+                        <a class="templates__link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#e9e9e9" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                            <img alt="Макет Mishka" src="images/img-mishka.jpg">
+                        </a>
+                        <div class="item__description visually-hidden">
+                            <h2 class="name_of_template">MISHKA</h2>
+                            <p>Информационный сайт<br>для туристов</p>
+                            <a href="#" class="btn">9 900 РУБ.</a>
+                        </div>
+                    </li>
+                    <li class="templates__item">
+                        <a class="templates__link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#e9e9e9" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                            <img alt="Макет Aplus" src="images/img-aplus.jpg">
+                        </a>
+                        <div class="item__description visually-hidden">
+                            <h2 class="name_of_template">APLUS</h2>
+                            <p>Информационный сайт<br>для туристов</p>
+                            <a href="#" class="btn">9 900 РУБ.</a>
+                        </div>
+                    </li>
+                    <li class="templates__item">
+                        <a class="templates__link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#e9e9e9" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                            <img alt="Макет Kvast" src="images/img-kvast.jpg">
+                        </a>
+                        <div class="item__description visually-hidden">
+                            <h2 class="name_of_template">KVAST</h2>
+                            <p>Информационный сайт<br>для туристов</p>
+                            <a href="#" class="btn">9 900 РУБ.</a>
+                        </div>
+                    </li>
                 </ul>
                 <nav class="templates__page">
                     <a href="#" class="page_btn page_btn--active">1</a>
@@ -173,5 +233,6 @@
     </section>
 
     <script src="popup-feedback.js"></script>
+    <script src="templates.js"></script>
 </body>
 </html>
