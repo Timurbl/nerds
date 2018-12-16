@@ -1,76 +1,85 @@
-var templates = document.querySelectorAll(".templates__item");
+var templates = [
+    {
+        "name": "SEDONA",
+        "price": "9 900 РУБ",
+        "price_sort": "9900",
+        "par_1": "Информационный сайт",
+        "par_2": "для туристов",
+        "link": "",
+        "alt": "Макет Sedona",
+        "picture": "images/img-sedona.jpg"
+    },
+    {
+        "name": "PINK APP",
+        "price": "9 900 РУБ",
+        "price_sort": "9900",
+        "par_1": "Продуктовый лендинг",
+        "par_2": "приложения для IOS и Android",
+        "link": "",
+        "alt": "Макет Pink",
+        "picture": "images/img-pink.jpg"
+    },
+    {
+        "name": "BARBERSHOP",
+        "price": "9 900 РУБ",
+        "price_sort": "9900",
+        "par_1": "Информационный сайт",
+        "par_2": "для туристов",
+        "link": "",
+        "alt": "Макет Barbershop",
+        "picture": "images/img-barbershop.jpg"
+    },
+    {
+        "name": "MISHKA",
+        "price": "9 900 РУБ",
+        "price_sort": "9900",
+        "par_1": "Информационный сайт",
+        "par_2": "для туристов",
+        "link": "",
+        "alt": "Макет Mishka",
+        "picture": "images/img-mishka.jpg"
+    },
+    {
+        "name": "APLUS",
+        "price": "9 900 РУБ",
+        "price_sort": "9900",
+        "par_1": "Информационный сайт",
+        "par_2": "для туристов",
+        "link": "",
+        "alt": "Макет Aplus",
+        "picture": "images/img-aplus.jpg"
+    },
+    {
+        "name": "KVAST",
+        "price": "9 900 РУБ",
+        "price_sort": "9900",
+        "par_1": "Информационный сайт",
+        "par_2": "для туристов",
+        "link": "",
+        "alt": "Макет Kvast",
+        "picture": "images/img-kvast.jpg"
+    }
+];
 
+console.log(templates[0][name]);
 
-templates[0].addEventListener("mouseover", function (evt) {
-    evt.preventDefault();
-    var block = templates[0].querySelector('.item__description');
-    block.classList.remove('visually-hidden')
+var container = document.querySelector('.templates');
+
+templates.forEach(function (templ) {
+    var element = getElementFromTemplate(templ);
+    container.appendChild(element)
 });
 
-templates[1].addEventListener("mouseover", function (evt) {
-    evt.preventDefault();
-    var block = templates[1].querySelector('.item__description');
-    block.classList.remove('visually-hidden')
-});
 
-templates[2].addEventListener("mouseover", function (evt) {
-    evt.preventDefault();
-    var block = templates[2].querySelector('.item__description');
-    block.classList.remove('visually-hidden')
-});
-
-templates[3].addEventListener("mouseover", function (evt) {
-    evt.preventDefault();
-    var block = templates[3].querySelector('.item__description');
-    block.classList.remove('visually-hidden')
-});
-
-templates[4].addEventListener("mouseover", function (evt) {
-    evt.preventDefault();
-    var block = templates[4].querySelector('.item__description');
-    block.classList.remove('visually-hidden')
-});
-
-templates[5].addEventListener("mouseover", function (evt) {
-    evt.preventDefault();
-    var block = templates[5].querySelector('.item__description');
-    block.classList.remove('visually-hidden')
-});
-
-
-
-templates[0].addEventListener("mouseout", function (evt) {
-    evt.preventDefault();
-    var block = templates[0].querySelector('.item__description');
-    block.classList.add('visually-hidden')
-});
-
-templates[1].addEventListener("mouseout", function (evt) {
-    evt.preventDefault();
-    var block = templates[1].querySelector('.item__description');
-    block.classList.add('visually-hidden')
-});
-
-templates[2].addEventListener("mouseout", function (evt) {
-    evt.preventDefault();
-    var block = templates[2].querySelector('.item__description');
-    block.classList.add('visually-hidden')
-});
-
-templates[3].addEventListener("mouseout", function (evt) {
-    evt.preventDefault();
-    var block = templates[3].querySelector('.item__description');
-    block.classList.add('visually-hidden')
-});
-
-templates[4].addEventListener("mouseout", function (evt) {
-    evt.preventDefault();
-    var block = templates[4].querySelector('.item__description');
-    block.classList.add('visually-hidden')
-});
-
-templates[5].addEventListener("mouseout", function (evt) {
-    evt.preventDefault();
-    var block = templates[5].querySelector('.item__description');
-    block.classList.add('visually-hidden')
-});
+function getElementFromTemplate(data) {
+    console.log(data);
+    var template = document.querySelector('#template');
+    var element = template.content.children[0].cloneNode(true);
+    element.querySelector('.name_of_template').textContent = data['name'];
+    element.querySelector('.template__par').textContent = data['par_1'] + '<br>' + data['par_2'];
+    element.querySelector('.template__price').textContent = data['price'];
+    var image = element.querySelector('.template_image');
+    image.src = data['picture'];
+    image.alt = data['alt'];
+    return element
+}

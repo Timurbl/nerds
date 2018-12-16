@@ -772,6 +772,10 @@ hr {
     line-height: 18px;
 }
 
+.sort__item:nth-child(3) {
+    margin-right: 65px;
+}
+
 .sort__href {
     color: #b2b2b2;
     text-decoration: none;
