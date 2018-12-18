@@ -5,7 +5,7 @@
     <title>Title</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="normalize.min.css">
+    <!--<link rel="stylesheet" href="normalize.min.css">-->
 </head>
 <body>
     <header class="page-header">
@@ -95,18 +95,22 @@
                 <nav class="templates__navigation">
                     <b>Сортировать:</b>
                     <ul class="sort">
-                        <li class="sort__item"><a class="sort__href--active sort__href" href="#">По цене</a></li>
-                        <li class="sort__item"><a class="sort__href" href="#">По типу</a></li>
-                        <li class="sort__item"><a class="sort__href" href="#">По названию</a></li>
+                        <li class="sort__item"><a class="sort__href--active sort__href" id="by_price" href="#">По цене</a></li>
+                        <li class="sort__item"><a class="sort__href" id="by_type" href="#">По типу</a></li>
+                        <li class="sort__item"><a class="sort__href" id="by_name" href="#">По названию</a></li>
                         <li class="sort__item">
-                            <svg width="11" height="10">
-                                <polygon points="0,0 11,0 5,10" fill="#010101"></polygon>
-                            </svg>
+                            <a class="in_descending_order" href="#">
+                                <svg class="in_descending_order" width="11" height="10">
+                                    <polygon points="0,0 11,0 5,10" fill="#010101"></polygon>
+                                </svg>
+                            </a>
                         </li>
                         <li class="sort__item">
-                            <svg width="11" height="10">
-                                <polygon points="0,10 11,10 5,0" fill="#a6a6a6"></polygon>
-                            </svg>
+                            <a href="#">
+                                <svg class="in_ascending_order sort__order--active" width="11" height="10">
+                                    <polygon points="0,10 11,10 5,0" fill="#a6a6a6"></polygon>
+                                </svg>
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -195,6 +199,5 @@
 
     <script src="popup-feedback.js"></script>
     <script src="templates.js"></script>
-    <script src="templates_click.js"></script>
 </body>
 </html>
