@@ -15,15 +15,15 @@
     <session id="1355798264">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="24" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.20" value="2" />
+          <entry key="project.open.time.20" value="3" />
           <entry key="project.open.time.22" value="2" />
           <entry key="project.open.time.23" value="2" />
           <entry key="project.open.time.24" value="1" />
-          <entry key="project.open.time.25" value="3" />
-          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.25" value="4" />
+          <entry key="project.open.time.26" value="2" />
           <entry key="project.open.time.27" value="2" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.30" value="1" />
@@ -31,7 +31,7 @@
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.61" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -45,8 +45,8 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="2533" />
-          <entry key="html" value="1553" />
-          <entry key="js" value="3452" />
+          <entry key="html" value="1560" />
+          <entry key="js" value="4020" />
           <entry key="json" value="241" />
           <entry key="svg" value="62" />
         </counts>
@@ -63,9 +63,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="2533" />
-          <entry key="HTML" value="1553" />
+          <entry key="HTML" value="1560" />
           <entry key="JSON" value="241" />
-          <entry key="JavaScript" value="3452" />
+          <entry key="JavaScript" value="4020" />
           <entry key="SVG" value="62" />
         </counts>
       </usages-collector>
@@ -92,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="200" column="40" selection-start-line="200" selection-start-column="40" selection-end-line="200" selection-end-column="40" />
+            <state relative-caret-position="357">
+              <caret line="110" column="82" lean-forward="true" selection-start-line="110" selection-start-column="75" selection-end-line="110" selection-end-column="82" />
               <folding>
                 <element signature="n#section#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#form#0;n#section#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
@@ -111,9 +111,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+            <state relative-caret-position="192">
+              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
               <folding>
+                <element signature="e#2149#2157#0" />
+                <element signature="e#2338#2346#0" />
+                <element signature="e#2017#2314#0" />
+                <element signature="e#2366#2664#0" />
+                <element signature="e#2715#3012#0" />
+                <element signature="n#!!block;n#sortTemplates#0" />
+                <element signature="n#!!block;n#clearContainer#0" />
+                <element signature="n#!!block;n#getElementFromTemplate#0" />
+                <element signature="n#!!block;n#sortByPrice#0" />
+                <element signature="n#!!block;n#sortByName#0" />
                 <element signature="n#!!block;n#templatesClick#0" />
               </folding>
             </state>
@@ -185,7 +195,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1940" />
@@ -277,16 +287,18 @@
       <workItem from="1545055297361" duration="4803000" />
       <workItem from="1545128817217" duration="818000" />
       <workItem from="1545145717906" duration="1502000" />
-      <workItem from="1545150721113" duration="2185000" />
+      <workItem from="1545150721113" duration="2576000" />
+      <workItem from="1545156315354" duration="215000" />
+      <workItem from="1545194629528" duration="48000" />
+      <workItem from="1545232274119" duration="3718000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107328000" />
+    <option name="totallyTimeSpent" value="111700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.11368143" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -342,8 +354,16 @@
     <entry file="file://$PROJECT_DIR$/tsconfig.json" />
     <entry file="file://$PROJECT_DIR$/templates_data.js" />
     <entry file="file://$PROJECT_DIR$/templates.json" />
+    <entry file="file://$PROJECT_DIR$/templates_click.js" />
     <entry file="file://$PROJECT_DIR$/images/browser.svg">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -359,24 +379,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates_click.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="76" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catalog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="200" column="40" selection-start-line="200" selection-start-column="40" selection-end-line="200" selection-end-column="40" />
+        <state relative-caret-position="357">
+          <caret line="110" column="82" lean-forward="true" selection-start-line="110" selection-start-column="75" selection-end-line="110" selection-end-column="82" />
           <folding>
             <element signature="n#section#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#form#0;n#section#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
@@ -392,9 +398,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+        <state relative-caret-position="192">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
           <folding>
+            <element signature="e#2149#2157#0" />
+            <element signature="e#2338#2346#0" />
+            <element signature="e#2017#2314#0" />
+            <element signature="e#2366#2664#0" />
+            <element signature="e#2715#3012#0" />
+            <element signature="n#!!block;n#sortTemplates#0" />
+            <element signature="n#!!block;n#clearContainer#0" />
+            <element signature="n#!!block;n#getElementFromTemplate#0" />
+            <element signature="n#!!block;n#sortByPrice#0" />
+            <element signature="n#!!block;n#sortByName#0" />
             <element signature="n#!!block;n#templatesClick#0" />
           </folding>
         </state>

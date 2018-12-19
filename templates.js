@@ -67,8 +67,34 @@ var byPrice = document.querySelector('#by_price');
 var byType = document.querySelector('#by_type');
 var sortActive = document.querySelector('.sort__href--active');
 
-sortTemplates(sortBy, templatesArr);
+var inDescendingOrder = document.querySelector('.in_descending_order');
+var inAscendingOrder = document.querySelector('.in_ascending_order');
+
+var sortByDescendingOrder = true;
+
+sortTemplates(sortBy, templatesArr, sortByDescendingOrder);
 templatesClick();
+
+
+inDescendingOrder.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    if (!sortByDescendingOrder) {
+        sortByDescendingOrder = true;
+        inDescendingOrder.children[0].children[0].style.fill = '#010101';
+        inAscendingOrder.children[0].children[0].style.fill = '#a6a6a6';
+        sortTemplates(sortBy, templatesArr, sortByDescendingOrder);
+    }
+});
+
+inAscendingOrder.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    if (sortByDescendingOrder) {
+        sortByDescendingOrder = false;
+        inAscendingOrder.children[0].children[0].style.fill = '#010101';
+        inDescendingOrder.children[0].children[0].style.fill = '#a6a6a6';
+        sortTemplates(sortBy, templatesArr, sortByDescendingOrder)
+    }
+});
 
 byName.addEventListener('click',function (evt) {
     evt.preventDefault();
@@ -76,7 +102,7 @@ byName.addEventListener('click',function (evt) {
     sortActive.classList.remove('sort__href--active');
     sortActive = document.querySelector('.sort__href--active');
     sortBy = document.querySelector('.sort__href--active');
-    sortTemplates(sortBy, templatesArr);
+    sortTemplates(sortBy, templatesArr, sortByDescendingOrder);
 });
 
 byPrice.addEventListener('click',function (evt) {
@@ -85,7 +111,7 @@ byPrice.addEventListener('click',function (evt) {
     sortActive.classList.remove('sort__href--active');
     sortActive = document.querySelector('.sort__href--active');
     sortBy = document.querySelector('.sort__href--active');
-    sortTemplates(sortBy, templatesArr);
+    sortTemplates(sortBy, templatesArr, sortByDescendingOrder);
 });
 
 byType.addEventListener('click',function (evt) {
@@ -94,20 +120,20 @@ byType.addEventListener('click',function (evt) {
     sortActive.classList.remove('sort__href--active');
     sortActive = document.querySelector('.sort__href--active');
     sortBy = document.querySelector('.sort__href--active');
-    sortTemplates(sortBy, templatesArr);
+    sortTemplates(sortBy, templatesArr, sortByDescendingOrder);
 });
 
 
-function sortTemplates(sortBy, templatesArr) {
-    if (sortBy.textContent == 'По цене') {
-        var sortOrder = document.querySelector('.sort__order--active');
-        var reverse = false;
+function sortTemplates(sortBy, templatesArr, sortByDescendingOrder) {
+    var reverse;
 
-        if (sortOrder.classList[0] == 'in_descending_order' || sortOrder.classList[1] == 'in_descending_order') {
+    if (sortBy.textContent == 'По цене') {
+
+        if (sortByDescendingOrder) {
             reverse = true;
         }
         else {
-            reverse = false
+            reverse = false;
         }
         templatesArr.sort(sortByPrice);
         if (reverse)
@@ -117,7 +143,16 @@ function sortTemplates(sortBy, templatesArr) {
         console.log('sort by type');
     }
     else {
-        templatesArr.sort(sortByName)
+        if (sortByDescendingOrder) {
+            reverse = true;
+        }
+        else {
+            reverse = false;
+        }
+
+        templatesArr.sort(sortByName);
+        if (reverse)
+            templatesArr.reverse();
     }
 
     var container = document.querySelector('.templates');
@@ -149,7 +184,6 @@ function getElementFromTemplate(data) {
     image.alt = data['alt'];
     return element
 }
-
 
 function sortByPrice(a, b) {
     if (a['price_sort'] >= b['price_sort'])
@@ -239,5 +273,3 @@ function templatesClick() {
         block.classList.add('visually-hidden')
     });
 }
-
-
