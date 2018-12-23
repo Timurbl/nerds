@@ -743,7 +743,35 @@ hr {
 
 .section-filter {
     width: 260px;
+
 }
+/*
+.grid-type__list {
+    padding: 0;
+    position: relative;
+}
+
+.filter__type {
+    list-style: none;
+    position: relative;
+    padding-left: 35px;
+    padding-bottom: 15px;
+}
+
+.filter__type__label {
+}
+
+.filter__grid-type::before {
+    content: '';
+    top: 5px;
+    left: 0;
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    background-color: #a6a6a6;
+}
+*/
+
 
 .section-templates {
     width: 760px;
@@ -834,7 +862,7 @@ hr {
 
 .item__description {
     position: absolute;
-    top: 420px;
+    top: 402px;
 
     background-color: #eeeeee;
     text-align: center;

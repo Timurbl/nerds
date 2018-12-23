@@ -1,0 +1,62 @@
+[
+  {
+    "name": "SEDONA",
+    "price": "9 900 РУБ",
+    "price_sort": "9900",
+    "par_1": "Информационный сайт",
+    "par_2": "для туристов",
+    "link": "",
+    "alt": "Макет Sedona",
+    "picture": "images/img-sedona.jpg"
+  },
+  {
+    "name": "PINK APP",
+    "price": "9 900 РУБ",
+    "price_sort": "9900",
+    "par_1": "Продуктовый лендинг",
+    "par_2": "приложения для IOS и Android",
+    "link": "",
+    "alt": "Макет Pink",
+    "picture": "images/img-pink.jpg"
+  },
+  {
+    "name": "BARBERSHOP",
+    "price": "9 500 РУБ",
+    "price_sort": "9500",
+    "par_1": "Сайт салона красоты.",
+    "par_2": "Для мужчин, да.",
+    "link": "",
+    "alt": "Макет Barbershop",
+    "picture": "images/img-barbershop.jpg"
+  },
+  {
+    "name": "MISHKA",
+    "price": "9 300 РУБ",
+    "price_sort": "9300",
+    "par_1": "Интернет-магазин",
+    "par_2": "вязаных игрушек",
+    "link": "",
+    "alt": "Макет Mishka",
+    "picture": "images/img-mishka.jpg"
+  },
+  {
+    "name": "APLUS",
+    "price": "8 000 РУБ",
+    "price_sort": "8000",
+    "par_1": "Лендинг курсов повышения",
+    "par_2": "квалификации",
+    "link": "",
+    "alt": "Макет Aplus",
+    "picture": "images/img-aplus.jpg"
+  },
+  {
+    "name": "KVAST",
+    "price": "6 900 РУБ",
+    "price_sort": "6900",
+    "par_1": "Промо-сайт производителя",
+    "par_2": "крафтового кваса",
+    "link": "",
+    "alt": "Макет Kvast",
+    "picture": "images/img-kvast.jpg"
+  }
+]
