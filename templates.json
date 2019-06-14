@@ -10,14 +10,14 @@
     "picture": "images/img-sedona.jpg"
   },
   {
-    "name": "PINK APP",
-    "price": "9 900 РУБ",
-    "price_sort": "9900",
-    "par_1": "Продуктовый лендинг",
-    "par_2": "приложения для IOS и Android",
+    "name": "APLUS",
+    "price": "8 000 РУБ",
+    "price_sort": "8000",
+    "par_1": "Лендинг курсов повышения",
+    "par_2": "квалификации",
     "link": "",
-    "alt": "Макет Pink",
-    "picture": "images/img-pink.jpg"
+    "alt": "Макет Aplus",
+    "picture": "images/img-aplus.jpg"
   },
   {
     "name": "BARBERSHOP",
@@ -40,14 +40,14 @@
     "picture": "images/img-mishka.jpg"
   },
   {
-    "name": "APLUS",
-    "price": "8 000 РУБ",
-    "price_sort": "8000",
-    "par_1": "Лендинг курсов повышения",
-    "par_2": "квалификации",
+    "name": "PINK APP",
+    "price": "9 900 РУБ",
+    "price_sort": "9900",
+    "par_1": "Продуктовый лендинг",
+    "par_2": "приложения для IOS и Android",
     "link": "",
-    "alt": "Макет Aplus",
-    "picture": "images/img-aplus.jpg"
+    "alt": "Макет Pink",
+    "picture": "images/img-pink.jpg"
   },
   {
     "name": "KVAST",

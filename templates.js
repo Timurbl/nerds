@@ -1,102 +1,24 @@
 (function () {
-    var sortBy = document.querySelector('.sort__href--active');
-    var byName = document.querySelector('#by_name');
-    var byPrice = document.querySelector('#by_price');
-    var byType = document.querySelector('#by_type');
-    var sortActive = document.querySelector('.sort__href--active');
-
-    var inDescendingOrder = document.querySelector('.in_descending_order');
-    var inAscendingOrder = document.querySelector('.in_ascending_order');
-
-    var sortByDescendingOrder = true;
 
     getTemplates();
 
+    function getTemplates() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'templates.json');
+        xhr.onload = function (evt) {
+            var rawData = evt.target.response;
+            var loadedTemplates = JSON.parse(rawData);
+            renderTemplates(loadedTemplates);
+        };
+        xhr.send();
 
+    }
 
-    inDescendingOrder.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        if (!sortByDescendingOrder) {
-            sortByDescendingOrder = true;
-            inDescendingOrder.children[0].children[0].style.fill = '#010101';
-            inAscendingOrder.children[0].children[0].style.fill = '#a6a6a6';
-            getTemplates();
-        }
-    });
-
-    inAscendingOrder.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        if (sortByDescendingOrder) {
-            sortByDescendingOrder = false;
-            inAscendingOrder.children[0].children[0].style.fill = '#010101';
-            inDescendingOrder.children[0].children[0].style.fill = '#a6a6a6';
-            getTemplates();
-        }
-    });
-
-    byName.addEventListener('click',function (evt) {
-        evt.preventDefault();
-        byName.classList.add('sort__href--active');
-        sortActive.classList.remove('sort__href--active');
-        sortActive = document.querySelector('.sort__href--active');
-        sortBy = document.querySelector('.sort__href--active');
-        getTemplates();
-    });
-
-    byPrice.addEventListener('click',function (evt) {
-        evt.preventDefault();
-        byPrice.classList.add('sort__href--active');
-        sortActive.classList.remove('sort__href--active');
-        sortActive = document.querySelector('.sort__href--active');
-        sortBy = document.querySelector('.sort__href--active');
-        getTemplates();
-    });
-
-    byType.addEventListener('click',function (evt) {
-        evt.preventDefault();
-        byType.classList.add('sort__href--active');
-        sortActive.classList.remove('sort__href--active');
-        sortActive = document.querySelector('.sort__href--active');
-        sortBy = document.querySelector('.sort__href--active');
-        getTemplates();
-    });
-
-
-    function sortTemplates(sortBy, templatesArr, sortByDescendingOrder) {
-        var reverse;
-
-        if (sortBy.textContent == 'По цене') {
-
-            if (sortByDescendingOrder) {
-                reverse = true;
-            }
-            else {
-                reverse = false;
-            }
-            templatesArr.sort(sortByPrice);
-            if (reverse)
-                templatesArr.reverse();
-        }
-        else if (sortBy.textContent == 'По типу') {
-            console.log('sort by type');
-        }
-        else {
-            if (sortByDescendingOrder) {
-                reverse = true;
-            }
-            else {
-                reverse = false;
-            }
-
-            templatesArr.sort(sortByName);
-            if (reverse)
-                templatesArr.reverse();
-        }
-
+    function renderTemplates(templates) {
         var container = document.querySelector('.templates');
         clearContainer(container);
 
-        templatesArr.forEach(function (templ) {
+        templates.forEach(function (templ) {
             var element = getElementFromTemplate(templ);
             container.appendChild(element)
         });
@@ -124,41 +46,11 @@
         return element
     }
 
-    function sortByPrice(a, b) {
-        if (a['price_sort'] >= b['price_sort'])
-            return 1;
-        return 0;
-    }
-
-    function sortByName(a, b) {
-        if (a['name'] >= b['name'])
-            return 1;
-        return 0
-    }
-
-    function getTemplates() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'templates.json');
-        xhr.onload = function (evt) {
-            var rawData = evt.target.response;
-            var loadedTemplates = JSON.parse(rawData);
-            renderTemplates(loadedTemplates);
-        };
-        xhr.send();
-
-    }
-
-    function renderTemplates(templates) {
-        sortTemplates(sortBy, templates, sortByDescendingOrder);
-    }
-
     function templatesClick() {
         var templates = document.querySelectorAll(".templates__item");
 
         var item__description = document.querySelectorAll(".item__description");
         var path = document.querySelectorAll("path");
-        console.log(item__description)
-        console.log(path)
 
 
         templates[0].addEventListener("mouseover", function (evt) {
