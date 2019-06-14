@@ -12,21 +12,6 @@
 
     getTemplates();
 
-    function getTemplates() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'templates.json');
-        xhr.onload = function (evt) {
-            var rawData = evt.target.response;
-            var loadedTemplates = JSON.parse(rawData);
-            renderTemplates(loadedTemplates);
-        };
-        xhr.send();
-    }
-
-    function renderTemplates(templates) {
-        sortTemplates(sortBy, templates, sortByDescendingOrder);
-        templatesClick();
-    }
 
 
     inDescendingOrder.addEventListener('click', function (evt) {
@@ -116,6 +101,7 @@
             container.appendChild(element)
         });
 
+
         templatesClick();
     }
 
@@ -150,8 +136,30 @@
         return 0
     }
 
+    function getTemplates() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'templates.json');
+        xhr.onload = function (evt) {
+            var rawData = evt.target.response;
+            var loadedTemplates = JSON.parse(rawData);
+            renderTemplates(loadedTemplates);
+        };
+        xhr.send();
+
+    }
+
+    function renderTemplates(templates) {
+        sortTemplates(sortBy, templates, sortByDescendingOrder);
+    }
+
     function templatesClick() {
         var templates = document.querySelectorAll(".templates__item");
+
+        var item__description = document.querySelectorAll(".item__description");
+        var path = document.querySelectorAll("path");
+        console.log(item__description)
+        console.log(path)
+
 
         templates[0].addEventListener("mouseover", function (evt) {
             evt.preventDefault();
@@ -225,5 +233,59 @@
             var block = templates[5].querySelector('.item__description');
             block.classList.add('visually-hidden')
         });
+
+
+
+        item__description[0].addEventListener("mouseover", function (evt) {
+            evt.preventDefault();
+            path[0].setAttribute("fill", "#4D4D4D");
+        });
+        item__description[1].addEventListener("mouseover", function (evt) {
+            evt.preventDefault();
+            path[1].setAttribute("fill", "#4D4D4D");
+        });
+        item__description[2].addEventListener("mouseover", function (evt) {
+            evt.preventDefault();
+            path[2].setAttribute("fill", "#4D4D4D");
+        });
+        item__description[3].addEventListener("mouseover", function (evt) {
+            evt.preventDefault();
+            path[3].setAttribute("fill", "#4D4D4D");
+        });
+        item__description[4].addEventListener("mouseover", function (evt) {
+            evt.preventDefault();
+            path[4].setAttribute("fill", "#4D4D4D");
+        });
+        item__description[5].addEventListener("mouseover", function (evt) {
+            evt.preventDefault();
+            path[5].setAttribute("fill", "#4D4D4D");
+        });
+
+
+        item__description[0].addEventListener("mouseout", function (evt) {
+            evt.preventDefault();
+            path[0].setAttribute("fill", "#e9e9e9");
+        });
+        item__description[1].addEventListener("mouseout", function (evt) {
+            evt.preventDefault();
+            path[1].setAttribute("fill", "#e9e9e9");
+        });
+        item__description[2].addEventListener("mouseout", function (evt) {
+            evt.preventDefault();
+            path[2].setAttribute("fill", "#e9e9e9");
+        });
+        item__description[3].addEventListener("mouseout", function (evt) {
+            evt.preventDefault();
+            path[3].setAttribute("fill", "#e9e9e9");
+        });
+        item__description[4].addEventListener("mouseout", function (evt) {
+            evt.preventDefault();
+            path[4].setAttribute("fill", "#e9e9e9");
+        });
+        item__description[5].addEventListener("mouseout", function (evt) {
+            evt.preventDefault();
+            path[5].setAttribute("fill", "#e9e9e9");
+        });
     }
+
 }());
