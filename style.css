@@ -833,15 +833,22 @@ hr {
     cursor: default;
 }
 
+.order__active svg polygon{
+    fill: #010101;
+}
+
 .templates {
     position: relative;
 
     padding: 0;
 
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+
 
 .templates__link img{
     margin-top: -10px;
