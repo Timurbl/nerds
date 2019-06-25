@@ -1,9 +1,9 @@
 (function () {
-    var sortBy = document.querySelector('.sort__href--active');
-    var byName = document.querySelector('#by_name');
-    var byPrice = document.querySelector('#by_price');
-    var byType = document.querySelector('#by_type');
-    var sortActive = document.querySelector('.sort__href--active');
+    let sortBy = document.querySelector('.sort__href--active');
+    let byName = document.querySelector('#by_name');
+    let byPrice = document.querySelector('#by_price');
+    let byType = document.querySelector('#by_type');
+    let sortActive = document.querySelector('.sort__href--active');
 
     var inDescendingOrder = document.querySelector('.in_descending_order');
     var inAscendingOrder = document.querySelector('.in_ascending_order');
@@ -79,50 +79,49 @@
 
     function sortTemplates(sortBy, templatesArr, sortByDescendingOrder) {
         var reverse;
+        var filterBy = sortBy.textContent;
 
-        if (sortBy.textContent == 'По цене') {
+        switch (filterBy) {
+            case 'По цене':
+                if (sortByDescendingOrder) {
+                    reverse = true;
+                }
+                else {
+                    reverse = false;
+                }
+                templatesArr.sort(sortByPrice);
+                if (reverse)
+                    templatesArr.reverse();
+                break;
+            case 'По типу':
+                console.log('sort by type');
+                break;
+            case 'По названию':
+                if (sortByDescendingOrder) {
+                    reverse = true;
+                }
+                else {
+                    reverse = false;
+                }
 
-            if (sortByDescendingOrder) {
-                reverse = true;
-            }
-            else {
-                reverse = false;
-            }
-            templatesArr.sort(sortByPrice);
-            if (reverse)
-                templatesArr.reverse();
+                templatesArr.sort(sortByName);
+                if (reverse)
+                    templatesArr.reverse();
+                break;
         }
-        else if (sortBy.textContent == 'По типу') {
-            console.log('sort by type');
-        }
-        else {
-            if (sortByDescendingOrder) {
-                reverse = true;
-            }
-            else {
-                reverse = false;
-            }
 
-            templatesArr.sort(sortByName);
-            if (reverse)
-                templatesArr.reverse();
-        }
-
+        var fragment = document.createDocumentFragment();
         var container = document.querySelector('.templates');
-        clearContainer(container);
+        container.innerHTML = '';
 
         templatesArr.forEach(function (templ) {
             var element = getElementFromTemplate(templ);
-            container.appendChild(element)
+            fragment.appendChild(element)
         });
 
-        templatesClick();
-    }
+        container.appendChild(fragment);
 
-    function clearContainer(container) {
-        while (container.children.length != 0) {
-            container.removeChild(container.firstChild);
-        }
+        templatesClick();
     }
 
     function getElementFromTemplate(data) {
