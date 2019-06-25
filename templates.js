@@ -1,14 +1,4 @@
 (function () {
-    let sortBy = document.querySelector('.sort__href--active');
-    let byName = document.querySelector('#by_name');
-    let byPrice = document.querySelector('#by_price');
-    let byType = document.querySelector('#by_type');
-    let sortActive = document.querySelector('.sort__href--active');
-
-    var inDescendingOrder = document.querySelector('.in_descending_order');
-    var inAscendingOrder = document.querySelector('.in_ascending_order');
-
-    var sortByDescendingOrder = true;
 
     getTemplates();
 
@@ -21,107 +11,26 @@
             renderTemplates(loadedTemplates);
         };
         xhr.send();
+
     }
 
     function renderTemplates(templates) {
-        sortTemplates(sortBy, templates, sortByDescendingOrder);
+        var container = document.querySelector('.templates');
+        clearContainer(container);
+
+        templates.forEach(function (templ) {
+            var element = getElementFromTemplate(templ);
+            container.appendChild(element)
+        });
+
+
         templatesClick();
     }
 
-
-    inDescendingOrder.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        if (!sortByDescendingOrder) {
-            sortByDescendingOrder = true;
-            inDescendingOrder.children[0].children[0].style.fill = '#010101';
-            inAscendingOrder.children[0].children[0].style.fill = '#a6a6a6';
-            getTemplates();
+    function clearContainer(container) {
+        while (container.children.length != 0) {
+            container.removeChild(container.firstChild);
         }
-    });
-
-    inAscendingOrder.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        if (sortByDescendingOrder) {
-            sortByDescendingOrder = false;
-            inAscendingOrder.children[0].children[0].style.fill = '#010101';
-            inDescendingOrder.children[0].children[0].style.fill = '#a6a6a6';
-            getTemplates();
-        }
-    });
-
-    byName.addEventListener('click',function (evt) {
-        evt.preventDefault();
-        byName.classList.add('sort__href--active');
-        sortActive.classList.remove('sort__href--active');
-        sortActive = document.querySelector('.sort__href--active');
-        sortBy = document.querySelector('.sort__href--active');
-        getTemplates();
-    });
-
-    byPrice.addEventListener('click',function (evt) {
-        evt.preventDefault();
-        byPrice.classList.add('sort__href--active');
-        sortActive.classList.remove('sort__href--active');
-        sortActive = document.querySelector('.sort__href--active');
-        sortBy = document.querySelector('.sort__href--active');
-        getTemplates();
-    });
-
-    byType.addEventListener('click',function (evt) {
-        evt.preventDefault();
-        byType.classList.add('sort__href--active');
-        sortActive.classList.remove('sort__href--active');
-        sortActive = document.querySelector('.sort__href--active');
-        sortBy = document.querySelector('.sort__href--active');
-        getTemplates();
-    });
-
-
-    function sortTemplates(sortBy, templatesArr, sortByDescendingOrder) {
-        var reverse;
-        var filterBy = sortBy.textContent;
-
-        switch (filterBy) {
-            case 'По цене':
-                if (sortByDescendingOrder) {
-                    reverse = true;
-                }
-                else {
-                    reverse = false;
-                }
-                templatesArr.sort(sortByPrice);
-                if (reverse)
-                    templatesArr.reverse();
-                break;
-            case 'По типу':
-                console.log('sort by type');
-                break;
-            case 'По названию':
-                if (sortByDescendingOrder) {
-                    reverse = true;
-                }
-                else {
-                    reverse = false;
-                }
-
-                templatesArr.sort(sortByName);
-                if (reverse)
-                    templatesArr.reverse();
-                break;
-        }
-
-        var fragment = document.createDocumentFragment();
-        var container = document.querySelector('.templates');
-        container.innerHTML = '';
-
-        templatesArr.forEach(function (templ) {
-            var element = getElementFromTemplate(templ);
-            fragment.appendChild(element)
-        });
-
-        container.appendChild(fragment);
-
-        templatesClick();
     }
 
     function getElementFromTemplate(data) {
@@ -137,20 +46,12 @@
         return element
     }
 
-    function sortByPrice(a, b) {
-        if (a['price_sort'] >= b['price_sort'])
-            return 1;
-        return 0;
-    }
-
-    function sortByName(a, b) {
-        if (a['name'] >= b['name'])
-            return 1;
-        return 0
-    }
-
     function templatesClick() {
         var templates = document.querySelectorAll(".templates__item");
+
+        var item__description = document.querySelectorAll(".item__description");
+        var path = document.querySelectorAll("path");
+
 
         templates[0].addEventListener("mouseover", function (evt) {
             evt.preventDefault();
@@ -224,5 +125,59 @@
             var block = templates[5].querySelector('.item__description');
             block.classList.add('visually-hidden')
         });
+
+
+
+        item__description[0].addEventListener("mouseover", function (evt) {
+            evt.preventDefault();
+            path[0].setAttribute("fill", "#4D4D4D");
+        });
+        item__description[1].addEventListener("mouseover", function (evt) {
+            evt.preventDefault();
+            path[1].setAttribute("fill", "#4D4D4D");
+        });
+        item__description[2].addEventListener("mouseover", function (evt) {
+            evt.preventDefault();
+            path[2].setAttribute("fill", "#4D4D4D");
+        });
+        item__description[3].addEventListener("mouseover", function (evt) {
+            evt.preventDefault();
+            path[3].setAttribute("fill", "#4D4D4D");
+        });
+        item__description[4].addEventListener("mouseover", function (evt) {
+            evt.preventDefault();
+            path[4].setAttribute("fill", "#4D4D4D");
+        });
+        item__description[5].addEventListener("mouseover", function (evt) {
+            evt.preventDefault();
+            path[5].setAttribute("fill", "#4D4D4D");
+        });
+
+
+        item__description[0].addEventListener("mouseout", function (evt) {
+            evt.preventDefault();
+            path[0].setAttribute("fill", "#e9e9e9");
+        });
+        item__description[1].addEventListener("mouseout", function (evt) {
+            evt.preventDefault();
+            path[1].setAttribute("fill", "#e9e9e9");
+        });
+        item__description[2].addEventListener("mouseout", function (evt) {
+            evt.preventDefault();
+            path[2].setAttribute("fill", "#e9e9e9");
+        });
+        item__description[3].addEventListener("mouseout", function (evt) {
+            evt.preventDefault();
+            path[3].setAttribute("fill", "#e9e9e9");
+        });
+        item__description[4].addEventListener("mouseout", function (evt) {
+            evt.preventDefault();
+            path[4].setAttribute("fill", "#e9e9e9");
+        });
+        item__description[5].addEventListener("mouseout", function (evt) {
+            evt.preventDefault();
+            path[5].setAttribute("fill", "#e9e9e9");
+        });
     }
+
 }());
